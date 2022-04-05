@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %}
+
+
+{% block title %}
+About
+    
+{% endblock title %}
+    
+
+{% block body %}
+
+
+<h2>Client</h2>
+<div class="container">
+
+    <form class="row g-3" method="post" action="/cont/">
+        {{% csrf_token %}}
+    <div class="col-md-12">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+
+      </div>
+      <div class="col-md-12">
+        <label for="address" class="form-label">address</label>
+        <input type="text" class="form-control" id="name" name="address">
+
+      </div>
+      <div class="col-md-12">
+        <label for="phone" class="form-label">phone</label>
+        <input type="text" class="form-control" id="name" name="phone">
+
+      </div>
+      
+   <button class="btn btn-primary md-6" >submit</button> 
+</div>
+</form>
+    
+{% endblock body %}
+    
